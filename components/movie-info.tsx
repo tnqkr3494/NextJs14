@@ -9,9 +9,7 @@ interface IMovieInfo {
   homepage: string;
 }
 
-async function getMovie(id: string): Promise<IMovieInfo> {
-  console.log(`Fetching movies: ${Date.now()}`);
-  // await new Promise((resolve) => setTimeout(resolve, 5000));
+export async function getMovie(id: string): Promise<IMovieInfo> {
   const response = await fetch(`${API_URL}/${id}`);
   return response.json();
 }
