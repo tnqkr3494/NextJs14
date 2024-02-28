@@ -16,13 +16,9 @@ export default async function MovieDetail({
 }) {
   return (
     <div style={{ width: "95%", margin: "0 auto" }}>
-      <Suspense fallback={<h1>Loading movie info</h1>}>
-        <MovieInfo id={id} />
-      </Suspense>
+      <MovieInfo id={id} />
       <hr />
-      <Suspense fallback={<h1>Loading movie videos</h1>}>
-        <MovieVideos id={id} />
-      </Suspense>
+      <MovieVideos id={id} />
     </div>
   );
 }
