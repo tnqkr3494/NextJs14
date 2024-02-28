@@ -29,7 +29,12 @@ export default async function MovieInfo({ id }: { id: string }) {
         <h3>★ {movie.vote_average}</h3>
         <p>{movie.overview}</p>
         <MovieCredit id={id} />
-        <a href={movie.homepage}>Homepage &rarr;</a>
+        <a className={styles.homeLink} href={movie.homepage}>
+          Homepage &rarr;
+        </a>
+        <a className={styles.similarLink} href={`/movies/${id}/similar`}>
+          similar &rarr;
+        </a>
       </div>
     </div>
   );
